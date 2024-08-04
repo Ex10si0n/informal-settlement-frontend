@@ -68,10 +68,10 @@ const Mapping = () => {
       city,
       longitude,
       latitude,
-      boxTLLng,
-      boxTLLat,
-      boxBRLng,
-      boxBRLat,
+      box_tl_lng: boxTLLng,
+      box_tl_lat: boxTLLat,
+      box_br_lng: boxBRLng,
+      box_br_lat: boxBRLat,
       wkt
     },
     model: {
