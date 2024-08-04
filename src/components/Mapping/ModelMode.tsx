@@ -16,6 +16,8 @@ const ModelMode: React.FC<MappingModelModeProps> = ({ onSelectionChange }) => {
     onSelectionChange(selectedModel, selectedMode)
   }, [selectedModel, selectedMode, onSelectionChange])
 
+  // TODO: only display mode when selected model is 'Random Forest Classifier'
+
   return (
     <div className="flex space-x-4">
       <div className="flex-1">
