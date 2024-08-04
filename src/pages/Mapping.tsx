@@ -122,6 +122,8 @@ const Mapping = () => {
             </button>
           </div>
 
+          {/*TODO: request API to return bounding box satellite image based on user input types*/}
+
           <form className="max-w-xl">
             <div className={styleSubtitle}>QUERY</div>
             {visibleComponent === 'city_name' && <CountryCity onChange={updateCountryCity}/>}
@@ -129,6 +131,7 @@ const Mapping = () => {
             {visibleComponent === 'bounding_box' && <BoundingBox onChange={updateBoxCoordinates}/>}
             {visibleComponent === 'wkt' && <WKT onChange={updateWKT}/>}
           </form>
+
 
           <div className={styleSubtitle}>MAPPING SELECTION PREVIEW</div>
           <Map/>
