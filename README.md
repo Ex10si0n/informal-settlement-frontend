@@ -1,6 +1,6 @@
 # Informal Settlement Mapping Frontend
 
-To develop, please run
+To develop, please run the follow command under Node 18 or higher:
 
 ```bash
 yarn dev
