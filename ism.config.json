@@ -1,0 +1,14 @@
+{
+  "version": "0.1",
+  "models": [
+    "Random Forest Classifier",
+    "V-Net",
+    "xxx"
+  ],
+  "modes": [
+    "cluster_1",
+    "cluster_2",
+    "Medellin"
+  ],
+  "defaultMappingModeBy": "city_name"
+}
