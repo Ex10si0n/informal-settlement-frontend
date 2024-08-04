@@ -8,6 +8,7 @@ import Year from "../components/Mapping/Year.tsx";
 import ModelMode from "../components/Mapping/ModelMode.tsx";
 import MappingClusterPlot from "../components/Mapping/ClusterPlot.tsx";
 import {defaultMappingModeBy} from "../config.ts";
+import {Button} from "flowbite-react";
 
 const Mapping = () => {
 
@@ -161,6 +162,7 @@ const Mapping = () => {
             {JSON.stringify(requestContent, null, 2)}
           </pre>
 
+          <Button color="blue" className="mt-4">Inference</Button>
         </div>
       </div>
     </>
