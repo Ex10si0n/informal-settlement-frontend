@@ -6,7 +6,6 @@ import WKT from '../components/Mapping/WKT.tsx';
 import Map from '../components/Mapping/Map.tsx';
 import Year from "../components/Mapping/Year.tsx";
 import ModelMode from "../components/Mapping/ModelMode.tsx";
-import MappingClusterPlot from "../components/Mapping/ClusterPlot.tsx";
 import {defaultMappingModeBy} from "../config.ts";
 import {Button} from "flowbite-react";
 
@@ -147,7 +146,7 @@ const Mapping = () => {
             <ModelMode onSelectionChange={updateModelMode}/>
           </form>
 
-          <MappingClusterPlot/>
+          {/*<MappingClusterPlot/>*/}
 
           <div className={styleSubtitle}>DOWNLOAD</div>
 

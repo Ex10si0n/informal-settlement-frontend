@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import {Label, Select } from "flowbite-react";
 import {models, modes} from "../../config.ts";
 
-
 interface MappingModelModeProps {
   onSelectionChange: (model: string, mode: string) => void
 }
@@ -15,8 +14,6 @@ const ModelMode: React.FC<MappingModelModeProps> = ({ onSelectionChange }) => {
   useEffect(() => {
     onSelectionChange(selectedModel, selectedMode)
   }, [selectedModel, selectedMode, onSelectionChange])
-
-  // TODO: only display mode when selected model is 'Random Forest Classifier'
 
   return (
     <div className="flex space-x-4">
@@ -31,19 +28,20 @@ const ModelMode: React.FC<MappingModelModeProps> = ({ onSelectionChange }) => {
         </Select>
       </div>
 
-      <div className="flex-1">
-        <div className="mb-2 block">
-          <Label htmlFor="mode" value="Choose Mode"/>
+      {selectedModel === 'Random Forest Classifier' && (
+        <div className="flex-1">
+          <div className="mb-2 block">
+            <Label htmlFor="mode" value="Choose Mode"/>
+          </div>
+          <Select id="mode" value={selectedMode}
+                  onChange={(e) => setSelectedMode(e.target.value)} required>
+            {modes.map((mode, index) => (
+              <option key={index} value={mode}>{mode}</option>
+            ))}
+          </Select>
         </div>
-        <Select id="mode" value={selectedMode}
-                onChange={(e) => setSelectedMode(e.target.value)} required>
-          {modes.map((mode, index) => (
-            <option key={index} value={mode}>{mode}</option>
-          ))}
-        </Select>
-      </div>
+      )}
     </div>
-
   )
 }
 

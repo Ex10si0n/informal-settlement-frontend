@@ -2,8 +2,7 @@
   "version": "0.1",
   "models": [
     "Random Forest Classifier",
-    "V-Net",
-    "xxx"
+    "V-Net"
   ],
   "modes": [
     "cluster_1",
